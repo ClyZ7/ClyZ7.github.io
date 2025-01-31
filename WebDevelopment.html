@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+            .mySlides {
+                display: block;  /* Ensures the container respects the image dimensions */
+                text-align: center; /* Centers the caption within the image container */
+                width: 100%;
+            }
+
+
+
+        </style>
+    </head>
+    <body class="w3-light-grey w3-content" style="max-width:1600px">
+
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+            <div class="w3-container">
+                <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                    <i class="fa fa-remove"></i>
+                </a>
+
+                <h4><b>CLYDE ZAMMIT </b></h4>
+                <h6><b>Personal Portfolio</b></h6>
+
+            </div>
+            <div class="w3-bar-block">
+                <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Main Page</a>
+
+                <a href="DesignTheory.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Design Theory</a>
+
+                <a href="GameDevelopment.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Game Development</a>
+
+                <a href="WebDevelopment.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Web Development</a>
+
+                <a href="UXDesign.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>UX Design</a>
+
+                <a href="3DGraphics.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>3D Graphics</a>
+
+                <a href="3DVisualEffects.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>3D Visual Effects</a>
+                <a href="https://www.linkedin.com/in/clyde-zammit-6b3aa6245/" target="_blank" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                    <i class="fa fa-linkedin fa-fw w3-margin-right"></i>My LinkedIn
+                </a>
+            </div>
+        </nav>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:300px">
+
+            <!-- Header -->
+            <header id="portfolio">
+                <!--                <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
+                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+                <div class="w3-container">
+                    <h1><b>WEB DEVELOPMENT</b></h1>
+
+                </div>
+            </header>
+
+            <div class="w3-row-padding">
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <video width="100%" height="240" autoplay muted loop>
+                        <source src="/resources/RestaurantWebsiteAndEmployeeSystem.mp4" type="video/mp4">                      
+                    </video>
+                    <div class="w3-container w3-white">
+                        <p><b>Restaurant Website & Employee Database</b></p>
+                        <p>Restaurant Application Developed with VUE 3</p>
+                    </div>
+
+                </div>
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <video width="100%" height="240" autoplay muted loop>
+                        <source src="/resources/ClubApp.mp4" type="video/mp4">                      
+                    </video>
+                    <div class="w3-container w3-white">
+                        <p><b>Club Members Online Application</b></p>
+                        <p>Membership Application Developed With VUE 3</p>
+                    </div>
+                </div>
+                <div class="w3-third w3-container">
+                    <video width="100%" height="240" autoplay muted loop>
+                        <source src="/resources/RegForm.mp4" type="video/mp4">                      
+                    </video>
+                    <div class="w3-container w3-white">
+                        <p><b>Registration Form</b></p>
+                        <p>Registration Form Created With HTML & CSS</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <script>
+
+                var myIndex = 0;
+                carousel();
+                carousel2();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 3000); // Change image every 2 seconds
+                }
+
+
+                // Script to open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
+
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+            </script>
+
+            </body>
+        </html>

@@ -9,6 +9,55 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+            .button-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 50px;
+            }
+
+            /* Default Button Styling */
+            .animated-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 160px;  /* Square Shape */
+                height: 160px;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                border-radius: 12px;
+                text-decoration: none;
+                box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transform-style: preserve-3d;
+                perspective: 600px;
+            }
+
+            /* Unique Colors for Each Button */
+            .design-theory { background: linear-gradient(135deg, #ff6b6b, #ff4757); }
+            .game-dev { background: linear-gradient(135deg, #1e90ff, #3742fa); }
+            .web-dev { background: linear-gradient(135deg, #2ed573, #1abc9c); }
+            .ux-design { background: linear-gradient(135deg, #ff9f43, #e67e22); }
+            .graphics { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+            .vfx { background: linear-gradient(135deg, #ff4757, #e74c3c); }
+
+            /* Hover Effect with Opposite Rotation */
+            .animated-button:hover {
+                transform: rotateX(-20deg) rotateY(20deg) scale(1.1);
+                box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.5);
+            }
+
+            /* Active Effect (Clicking) */
+            .animated-button:active {
+                transform: rotateX(0deg) rotateY(0deg) scale(0.95);
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+
+
+
         </style>
     </head>
     <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -20,11 +69,29 @@
                     <i class="fa fa-remove"></i>
                 </a>
 
-                <h4><b>CLYDE ZAMMIT</b></h4>
+                <h4><b>CLYDE ZAMMIT </b></h4>
+                <h6><b>Personal Portfolio</b></h6>
 
             </div>
             <div class="w3-bar-block">
-                <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>RECENT WORKS</a> 
+                <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Main Page</a>
+
+                <a href="DesignTheory.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Design Theory</a>
+
+                <a href="GameDevelopment.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Game Development</a>
+
+                <a href="WebDevelopment.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Web Development</a>
+
+                <a href="UXDesign.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>UX Design</a>
+
+                <a href="3DGraphics.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>3D Graphics</a>
+
+                <a href="3DVisualEffects.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>3D Visual Effects</a>
+
+                <a href="https://www.linkedin.com/in/clyde-zammit-6b3aa6245/" target="_blank" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                    <i class="fa fa-linkedin fa-fw w3-margin-right"></i>My LinkedIn
+                </a>
+
 
             </div>
 
@@ -38,13 +105,26 @@
 
             <!-- Header -->
             <header id="portfolio">
-<!--                <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
+                <!--                <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>-->
                 <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
                 <div class="w3-container">
-                    <h1><b>Personal Portfolio</b></h1>
+                    <h1><b>MAIN PAGE (ALL WORKS)</b></h1>
 
                 </div>
             </header>
+
+            <div class="button-container">
+                <a href="DesignTheory.html" class="animated-button design-theory">Design Theory</a>
+                <a href="GameDevelopment.html" class="animated-button game-dev">Game Development</a>
+                <a href="WebDevelopment.html" class="animated-button web-dev">Web <br> Development</a>
+                <a href="UXDesign.html" class="animated-button ux-design">UX Design</a>
+                <a href="3DGraphics.html" class="animated-button graphics">3D Graphics</a>
+                <a href="3DVisualEffects.html" class="animated-button vfx">3D Visual Effects</a>
+            </div>
+
+
+
+
 
             <!-- First Photo Grid-->
             <div class="w3-row-padding">
@@ -155,7 +235,7 @@
                     <p>3D Modelling and Animations With Autodesk Maya </p>
                 </div>
             </div>
-            
+
             <div class="w3-content w3-section" style="max-width:50%">
                 <img class="mySlides2" src="resources/AllAreas.png" style="width:100%">
                 <img class="mySlides2" src="resources/AllAreas2.png" style="width:100%">
@@ -193,7 +273,7 @@
                 x[myIndex-1].style.display = "block";  
                 setTimeout(carousel, 2000); // Change image every 2 seconds
             }
-            
+
             function carousel2() {
                 var i;
                 var x = document.getElementsByClassName("mySlides2");
